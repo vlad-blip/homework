@@ -21,7 +21,6 @@ body {
     border: 1px solid;
 
     transition: color .5s ease, background-color .5s ease;
-    // transition: all .5s ease;
 
     &--rounded {
         border-radius: 37px;
@@ -47,5 +46,23 @@ body {
             color: $white;
             background-color: $secondary-color-1;
         }
+    }
+}
+
+.icon {
+    display: block;
+    width: 48px;
+    height: 48px;
+
+    &--toolbox {
+        background: url('../images/icons/toolbox.svg') no-repeat center;
+    }
+
+    &--shop {
+        background: url('../images/icons/shop.svg') no-repeat center;
+    }
+
+    &--notebook {
+        background: url('../images/icons/notebook.svg') no-repeat center;
     }
 }
