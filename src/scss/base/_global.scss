@@ -49,20 +49,6 @@ body {
     }
 }
 
-.icon {
-    display: block;
-    width: 48px;
-    height: 48px;
-
-    &--toolbox {
-        background: url('../images/icons/toolbox.svg') no-repeat center;
-    }
-
-    &--shop {
-        background: url('../images/icons/shop.svg') no-repeat center;
-    }
-
-    &--notebook {
-        background: url('../images/icons/notebook.svg') no-repeat center;
-    }
+.icon-svg {
+    fill: $secondary-color-1
 }

@@ -111,8 +111,19 @@
             color: $second-text-color;
         }
 
-        &:last-child {
+        &:hover {
             background-color: $secondary-color-1;
+            .icon-svg {
+                fill: $white;
+            }
+
+            .header-card__list-item__header {
+                color: $white;
+            }
+
+            .header-card__list-item__description {
+                color: $white;
+            }
         }
         
     }
