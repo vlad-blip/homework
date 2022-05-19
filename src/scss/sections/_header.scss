@@ -2,7 +2,7 @@
     background: url('../images/content/header-cover.jpg'); 
     background-size: cover;
     background-position: top right;
-    min-height: 100vh;
+    min-height: calc(100vh - 40px);
 }
 
 .header-bar {
@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;   
 
-    &__logo {
+    &__logo { // .header-bar__logo
         font-weight: 700;
         font-size: 24px;
         line-height: 32px;
@@ -19,6 +19,7 @@
 
         transition: opacity .5s ease;
 
+        // .header-bar__logo:hover
         &:hover {
             opacity: .6;
         }
@@ -30,6 +31,10 @@
 
     &__menu-item {
         display: inline-block;
+
+        /*&:not(:last-child) {
+            margin-right: 21px;
+        }*/
 
         & + & {
             margin-left: 21px;
@@ -53,7 +58,8 @@
 }
 
 .header-hero {
-    margin: 80px 0;
+    margin-top: 80px;
+    margin-bottom: auto;
 
     &__title {
         font-weight: 800;
@@ -81,50 +87,69 @@
     }
 }
 
-.header-card {
+.header {
+    &-bottom{
+      margin-bottom: -20px;
 
-    &__list {
+      &__items{
         display: flex;
-        justify-content: space-between;
-        height: 210px;
+        margin: 0 -15px;
+        flex-wrap: wrap;
+        row-gap: 15px;
+      }
+      &__item{
+        flex: 1 0 33.333%;
+        padding: 0 15px;
+        min-width: 280px;  
+      }
     }
+  }
 
-    &__list-item {
-        display: flex;
-        flex-direction: column;
+@media all and (max-width: 800px) {
+    .item-header {
         justify-content: center;
-        background-color: $white;
-        padding: 35px 40px;
+    }
+}
 
-        &__header {
-            padding: 10px 0;
-            font-size: 24px;
-            font-weight: 700;
+.item-header {
 
-            color: $text-color;
+    padding: 35px 30px;
+    background-color: $white;
+    box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: all .5s ease;
+    cursor: default;
+    &:hover{
+        background-color: $secondary-color-1;
+        .item-header__name,
+        .item-header__descr{
+        color: $white;
         }
-
-        &__description {
-            font-size: 14px;
-            font-weight: 500;
-
-            color: $second-text-color;
+        .item-header__img svg path{
+        fill: $white;
         }
+    }
+    &__img{
+        margin-bottom: 10px;
 
-        &:hover {
-            background-color: $secondary-color-1;
-            .icon-svg {
-                fill: $white;
-            }
-
-            .header-card__list-item__header {
-                color: $white;
-            }
-
-            .header-card__list-item__description {
-                color: $white;
-            }
-        }
-        
+    }
+    &__name{
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 0.1px;
+        color: $text-color;
+        flex-grow: 1;
+        margin-bottom: 10px;
+        white-space: nowrap;
+    }
+    &__descr{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+        color: $second-text-color;
     }
 }

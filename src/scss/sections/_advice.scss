@@ -1,0 +1,62 @@
+.advice_content {
+    margin-top: 45px;
+}
+
+.advice {
+    padding-bottom: 70px;
+    padding-top: 137px;
+}
+
+.advice__container-header {
+    text-align: center;
+}
+
+.advice__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.advice__item {
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+
+    &__body {
+        padding: 30px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        height: 100% !important;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 16px;
+        color: $text-color;
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 14px;
+        color: $second-text-color;
+    }
+
+    &__picture {
+        position: relative;
+        padding: 0px 0px 60% 0px;
+    }
+
+    &__img {
+        position: absolute;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+      }
+}
+
+.advice {
+    background-color: $light-background-color;
+}

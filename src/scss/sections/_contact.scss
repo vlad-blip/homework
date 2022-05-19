@@ -1,0 +1,71 @@
+.getintouch {
+    background-color: $light-background-color-2;
+}
+
+.getintouch__container-header {
+    text-align: center;
+    padding: 80px 0 160px 0;
+}
+
+.getintouch__list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 178px 0;
+}
+
+.getintouch__item {
+    width: 328px;
+    &-content {
+        padding: 50px 0;
+        background-color: $white;
+        box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        height: 100%;
+        transition: all .5s ease;
+        cursor: default;
+        &:hover{
+            background-color: $dark-background-color;
+            .getintouch__item__list-email,
+            .getintouch__item-content__name,
+            .getintouch__item-content__button{
+                color: $white;
+            }
+            .getintouch__item-content__button {
+                border-color: $white;
+            }
+            .item-header__img svg path{
+            fill: $white;
+            }
+            transform: scale(1.1);
+        }
+        &__list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__name{
+            font-size: 16px;
+            font-weight: 700;
+            color: $text-color;
+        }
+        &__button{
+            padding: 10px 20px;
+            width: fit-content;
+            border-radius: 5px;
+            color: $primary-color;
+            border-color: $primary-color;
+        }
+        &__img{
+            width: 72px;
+            height: 72px;
+        }
+    }
+    &__list-email {
+        font-size: 14px;
+        font-weight: 600;
+        color: $text-color;
+    }
+}
